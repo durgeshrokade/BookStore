@@ -1,0 +1,23 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:localhost;DB_CLOSE_ON_EXIT=FALSE
+    username: admin
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    showSql: true
+    hibernate:
+      ddlAuto: update
+    properties:
+      hibernate:
+        formatSql: true
+
+logging:
+  level:
+    org.hibernate.sql: debug
+    org.hibernate.type.descriptor.sql: trace
